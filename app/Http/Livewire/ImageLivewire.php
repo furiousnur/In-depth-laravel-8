@@ -11,6 +11,12 @@ class ImageLivewire extends Component
 
     public $image;
 
+    protected $listeners = ['fileUpload' => 'handleFileUpload'];
+
+    public function handleFileUpload($image){
+        $this->image = $image;
+    }
+
     public function render()
     {
         return view('livewire.image-livewire');
