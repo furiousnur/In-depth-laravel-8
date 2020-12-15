@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d18ee6f0-b3b6-4499-b35a-f24deb370c23" name="Default Changelist" comment="" />
+    <list default="true" id="d18ee6f0-b3b6-4499-b35a-f24deb370c23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/in-dept-laravel-8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/in-dept-laravel-8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ImageLivewire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ImageLivewire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/image-livewire.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/image-livewire.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +40,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -120,18 +153,23 @@
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lO49PHV2165yWjP46WzzRrbSUi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LivewireCrud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -156,18 +194,39 @@
       <workItem from="1607679645986" duration="3573000" />
       <workItem from="1607791804014" duration="1216000" />
       <workItem from="1607876983861" duration="598000" />
-      <workItem from="1607967768601" duration="3067000" />
+      <workItem from="1607967768601" duration="3864000" />
+      <workItem from="1608049813096" duration="1690000" />
+      <workItem from="1608056704060" duration="3886000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1607532118274">
+    <state x="519" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608061370173">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
-    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1848.1053@0.27.1848.1053" timestamp="1607532118274" />
+    <state x="519" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1848.1053@0.27.1848.1053" timestamp="1608061370173" />
+    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1608054965649">
+      <screen x="0" y="27" width="1848" height="1053" />
+    </state>
+    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1848.1053@0.27.1848.1053" timestamp="1608054965649" />
+    <state width="263" height="541" key="HiddenNamespacesPopup" timestamp="1608061383604">
+      <screen x="0" y="27" width="1848" height="1053" />
+    </state>
+    <state width="263" height="541" key="HiddenNamespacesPopup/0.27.1848.1053@0.27.1848.1053" timestamp="1608061383604" />
     <state x="413" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1607540747437">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>

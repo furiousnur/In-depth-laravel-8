@@ -11,6 +11,10 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public function user(){
+        return $this->belongsTo(Bill::class, 'userId', 'id');
+    }
+
     /**
      * The attributes that are mass assignable.
      *
