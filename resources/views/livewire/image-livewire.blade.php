@@ -17,7 +17,8 @@
     <div class="ml-12">
         @if($img)
             @foreach($img as $val)
-            <img src="{{asset('storage/'.$val->image)}}" alt="" width="200" height="250">
+{{--            <img src="{{asset('storage/'.$val->image)}}" alt="" width="200" height="250">--}}
+            <img src="{{$val->imagePath}}" alt="" width="200" height="250">
             @endforeach
         @endif
     </div>
