@@ -27,8 +27,8 @@
                 <!-- Column Content -->
             </div>
 
-            <div class="my-1 px-1 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 shadow p-6">
-                <example-component />
+            <div class=" bg-blue-400 my-1 px-1 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 shadow p-6">
+                <main-component />
             </div>
 
             <div class="my-1 px-1 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3">
