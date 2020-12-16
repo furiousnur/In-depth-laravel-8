@@ -3964,10 +3964,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Index',
+  data: function data() {
+    return {
+      original_url: "",
+      errors: ""
+    };
+  },
   methods: {
-    submit: function submit() {}
+    submit: function submit() {
+      var _this = this;
+
+      axios.post("api-url-store", {
+        original_url: this.original_url
+      }).then(function (res) {
+        console.log(res);
+      })["catch"](function (e) {
+        // console.log(e.response.data.errors);
+        _this.errors = e.response.data.errors;
+      });
+    }
   }
 });
 
@@ -21774,9 +21795,40 @@ var render = function() {
                 }
               },
               [
+                _vm.errors.original_url
+                  ? _c("span", { staticClass: "text-xs text-red-500" }, [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(_vm.errors.original_url[0]) +
+                          "\n                    "
+                      )
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
                 _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.original_url,
+                      expression: "original_url"
+                    }
+                  ],
                   staticClass: "p-2 border rounded-md shadow-md w-64",
-                  attrs: { type: "text", placeholder: "Paste your big url" }
+                  attrs: {
+                    type: "text",
+                    required: "",
+                    placeholder: "Paste your big url"
+                  },
+                  domProps: { value: _vm.original_url },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.original_url = $event.target.value
+                    }
+                  }
                 }),
                 _vm._v(" "),
                 _c("i", {

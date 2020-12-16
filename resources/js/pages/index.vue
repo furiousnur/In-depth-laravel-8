@@ -6,7 +6,11 @@
                 <div class="my-2 px-2 w-full overflow-hidden sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3"></div>
                 <div class="my-2 px-2 w-full overflow-hidden sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 shadow p-5">
                     <form action="" @submit.prevent="submit">
-                        <input type="text" class="p-2 border rounded-md shadow-md w-64" placeholder="Paste your big url">
+                        <span class="text-xs text-red-500" v-if="errors.original_url">
+                            {{ errors.original_url[0] }}
+                        </span>
+                        <input type="text" class="p-2 border rounded-md shadow-md w-64" v-model="original_url" required
+                               placeholder="Paste your big url">
                         <i @click="submit" class="fas fa-paper-plane text-orange-600 px-3 cursor-pointer"></i>
                     </form>
                 </div>
@@ -17,12 +21,23 @@
 </template>
 
 <script>
-    export default {
-        name: 'Index',
-        methods: {
-            submit(){
-
-            }
+export default {
+    name: 'Index',
+    data() {
+        return {
+            original_url: "",
+            errors: ""
         }
-    };
+    },
+    methods: {
+        submit() {
+            axios.post("api-url-store", {original_url: this.original_url}).then(res => {
+                console.log(res);
+            }).catch((e) => {
+                // console.log(e.response.data.errors);
+                this.errors = e.response.data.errors;
+            })
+        }
+    }
+};
 </script>
