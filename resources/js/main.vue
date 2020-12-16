@@ -1,7 +1,9 @@
 <template>
     <div>
         <app-header />
-        <div class="min-h-screen"></div>
+        <div class="min-h-screen">
+            <app-index />
+        </div>
         <app-footer />
     </div>
     <!--<div class="p-3">
@@ -12,8 +14,9 @@
 <script>
 import AppHeader from "./components/layout/Header";
 import AppFooter from "./components/layout/Footer";
+import AppIndex from "./pages/index";
 export default {
-    components: {AppHeader, AppFooter},
+    components: {AppHeader, AppFooter, AppIndex},
     name: 'Index'
 };
 </script>

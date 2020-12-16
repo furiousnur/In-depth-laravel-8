@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-teal-600 p-4 flex justify-between">
+    <nav class="bg-teal-600 p-4 flex justify-between sticky">
         <h1 class="text-white text-xl">Home</h1>
         <div>
             <a href="#" class="text-xl text-white">Dashboard</a>
