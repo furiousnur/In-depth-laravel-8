@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('vue',function (){
+   return view('vue-welcome');
+});
+
 Route::get('db-insert', function (){
 /*   DB::table('users')->create([
      'name' => 'password',
@@ -36,9 +40,6 @@ Route::get('db-insert', function (){
    dd(\App\Models\User::all());
 });
 
-
-Route::group(['middleware' => 'auth'], function () {
-   /* Route::get('/', function ()    {
-        return view('welcome');
-    });*/
-});
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
