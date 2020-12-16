@@ -1,6 +1,7 @@
 <template>
     <div>
         <app-header />
+        <div class="min-h-screen"></div>
         <app-footer />
     </div>
     <!--<div class="p-3">

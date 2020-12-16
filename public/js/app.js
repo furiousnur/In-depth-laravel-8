@@ -3864,6 +3864,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Layout'
 });
@@ -3879,6 +3881,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3900,6 +3909,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/layout/Header */ "./resources/js/components/layout/Header.vue");
 /* harmony import */ var _components_layout_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/layout/Footer */ "./resources/js/components/layout/Footer.vue");
+//
 //
 //
 //
@@ -21570,9 +21580,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("I am Footer")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "footer",
+      { staticClass: "bg-teal-600 p-4 text-xl text-center text-white" },
+      [_c("h1", [_vm._v("Copy-wright Nur Alam")])]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -21594,9 +21615,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("I am Header")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("nav", { staticClass: "bg-teal-600 p-4 flex justify-between" }, [
+      _c("h1", { staticClass: "text-white text-xl" }, [_vm._v("Home")]),
+      _vm._v(" "),
+      _c("div", [
+        _c("a", { staticClass: "text-xl text-white", attrs: { href: "#" } }, [
+          _vm._v("Dashboard")
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "text-xl text-white px-3", attrs: { href: "#" } },
+          [_vm._v("Login")]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "px-3 text-xl text-white", attrs: { href: "#" } },
+          [_vm._v("Register")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -21618,7 +21666,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("app-header"), _vm._v(" "), _c("app-footer")], 1)
+  return _c(
+    "div",
+    [
+      _c("app-header"),
+      _vm._v(" "),
+      _c("div", { staticClass: "min-h-screen" }),
+      _vm._v(" "),
+      _c("app-footer")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
