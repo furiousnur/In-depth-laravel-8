@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d18ee6f0-b3b6-4499-b35a-f24deb370c23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/vue-app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5e4e9ff1-f06e-454d-90f3-30d594dc9ed2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5e4e9ff1-f06e-454d-90f3-30d594dc9ed2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/main.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vue-welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vue-welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +185,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/components/layout" />
       <recent name="$PROJECT_DIR$/resources/views" />
@@ -206,7 +217,9 @@
       <workItem from="1608049813096" duration="1690000" />
       <workItem from="1608056704060" duration="6046000" />
       <workItem from="1608098198891" duration="8001000" />
-      <workItem from="1608142764989" duration="6872000" />
+      <workItem from="1608142764989" duration="6970000" />
+      <workItem from="1608224763457" duration="6187000" />
+      <workItem from="1608313359053" duration="5196000" />
     </task>
     <servers />
   </component>
@@ -242,9 +255,13 @@
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
     <state x="413" y="188" width="1022" height="737" key="SettingsEditor/0.27.1848.1053@0.27.1848.1053" timestamp="1608143337451" />
-    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608120276369">
+    <state x="653" y="284" width="540" height="540" key="StructurePopup" timestamp="1608317030305">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
-    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1848.1053@0.27.1848.1053" timestamp="1608120276369" />
+    <state x="653" y="284" width="540" height="540" key="StructurePopup/0.27.1848.1053@0.27.1848.1053" timestamp="1608317030305" />
+    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608317091814">
+      <screen x="0" y="27" width="1848" height="1053" />
+    </state>
+    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1848.1053@0.27.1848.1053" timestamp="1608317091814" />
   </component>
 </project>

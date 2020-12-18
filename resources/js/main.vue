@@ -12,11 +12,10 @@
 </template>
 
 <script>
-import AppHeader from "./components/layout/Header";
-import AppFooter from "./components/layout/Footer";
-import AppIndex from "./pages/index";
-export default {
-    components: {AppHeader, AppFooter, AppIndex},
-    name: 'Index'
-};
+    import AppHeader from "./components/layout/Header";
+    import AppFooter from "./components/layout/Footer";
+    import AppIndex from "./pages/index";
+    export default {
+        components: {AppHeader, AppFooter, AppIndex},
+    };
 </script>

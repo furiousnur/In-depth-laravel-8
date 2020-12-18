@@ -418,6 +418,8 @@
                     </div>
                 </div>
                 <livewire:image-livewire />
+                <br>
+                <livewire:test-livewire />
             </div>
         </div>
     </div>

@@ -3931,8 +3931,7 @@ __webpack_require__.r(__webpack_exports__);
     AppHeader: _components_layout_Header__WEBPACK_IMPORTED_MODULE_0__["default"],
     AppFooter: _components_layout_Footer__WEBPACK_IMPORTED_MODULE_1__["default"],
     AppIndex: _pages_index__WEBPACK_IMPORTED_MODULE_2__["default"]
-  },
-  name: 'Index'
+  }
 });
 
 /***/ }),
@@ -3968,26 +3967,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Index',
   data: function data() {
     return {
       original_url: "",
-      errors: ""
+      original_url_error: "",
+      errors: "",
+      items: []
     };
   },
   methods: {
     submit: function submit() {
       var _this = this;
 
-      axios.post("api-url-store", {
-        original_url: this.original_url
-      }).then(function (res) {
-        console.log(res);
-      })["catch"](function (e) {
-        // console.log(e.response.data.errors);
-        _this.errors = e.response.data.errors;
-      });
+      this.original_url_error = "";
+
+      if (this.original_url == "") {
+        this.original_url_error = "original url field is required";
+      } else {
+        axios.post("api-url-store", {
+          original_url: this.original_url
+        }).then(function (res) {
+          // console.log(res.data.original_url);
+          _this.original_url = "";
+
+          _this.items.push(res.data);
+        })["catch"](function (e) {
+          // console.log(e.response.data.errors);
+          _this.errors = e.response.data.errors;
+        });
+      }
     }
   }
 });
@@ -21795,11 +21809,11 @@ var render = function() {
                 }
               },
               [
-                _vm.errors.original_url
+                !_vm.original_url
                   ? _c("span", { staticClass: "text-xs text-red-500" }, [
                       _vm._v(
                         "\n                        " +
-                          _vm._s(_vm.errors.original_url[0]) +
+                          _vm._s(_vm.original_url_error) +
                           "\n                    "
                       )
                     ])
@@ -21846,7 +21860,18 @@ var render = function() {
             "my-2 px-2 w-full overflow-hidden sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3"
         })
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "section",
+      { staticClass: "mt-5" },
+      _vm._l(_vm.items, function(item) {
+        return _c("div", { key: item.id }, [
+          _vm._v("\n            " + _vm._s(item.original_url) + "\n        ")
+        ])
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = []

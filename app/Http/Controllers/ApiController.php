@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use http\Env\Response;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -82,7 +84,12 @@ class ApiController extends Controller
         //
     }
 
-    public function apiUrlStore(){
-
+    public function apiUrlStore(Request $request)
+    {
+//        dump(\Log::info(print_r($request->all(),true)));
+        $post = new Post();
+        $post->original_url = $request->original_url;
+        $post->save();
+        return response()->json($post);
     }
 }
