@@ -17,11 +17,36 @@
                 <div class="my-2 px-2 w-full overflow-hidden sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3"></div>
             </div>
         </div>
-        <section class="mt-5">
-            <div v-for="item in items" :key="item.id">
-                {{ item.original_url }}
+        <div class="flex flex-wrap -mx-1 overflow-hidden">
+
+            <div class="my-1 px-1 w-full overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3">
+                <!-- Column Content -->
             </div>
-        </section>
+
+            <div class="my-1 px-1 w-full overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3">
+                <section class="mt-5">
+                    <div class="border rounded-md p-4">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Origianl Url</th>
+                                <th>Created Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="item in items" :key="item.id">
+                                <td class="rounded p-4 border text-sm">{{ item.original_url }}</td>
+                                <td class="rounded p-4 border text-sm">{{ item.created_at }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="my-1 px-1 w-full overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3">
+                <!-- Column Content -->
+            </div>
+        </div>
     </div>
 </template>
 
@@ -34,6 +59,9 @@ export default {
             errors: "",
             items: [],
         }
+    },
+    mounted(){
+        this.fetchData();
     },
     methods: {
         submit() {
@@ -50,6 +78,15 @@ export default {
                     this.errors = e.response.data.errors;
                 })
             }
+        },
+        fetchData(){
+            axios.get("api-url-get-all").then(res=>{
+                // console.log(res.data);
+                this.items = res.data;
+            }).catch((e) => {
+                // console.log(e.response.data.errors);
+                this.errors = e.response.data.errors;
+            })
         }
     }
 };

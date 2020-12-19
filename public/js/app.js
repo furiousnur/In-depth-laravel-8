@@ -3972,6 +3972,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3980,6 +4005,9 @@ __webpack_require__.r(__webpack_exports__);
       errors: "",
       items: []
     };
+  },
+  mounted: function mounted() {
+    this.fetchData();
   },
   methods: {
     submit: function submit() {
@@ -4002,6 +4030,17 @@ __webpack_require__.r(__webpack_exports__);
           _this.errors = e.response.data.errors;
         });
       }
+    },
+    fetchData: function fetchData() {
+      var _this2 = this;
+
+      axios.get("api-url-get-all").then(function (res) {
+        // console.log(res.data);
+        _this2.items = res.data;
+      })["catch"](function (e) {
+        // console.log(e.response.data.errors);
+        _this2.errors = e.response.data.errors;
+      });
     }
   }
 });
@@ -21862,19 +21901,66 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c(
-      "section",
-      { staticClass: "mt-5" },
-      _vm._l(_vm.items, function(item) {
-        return _c("div", { key: item.id }, [
-          _vm._v("\n            " + _vm._s(item.original_url) + "\n        ")
-        ])
+    _c("div", { staticClass: "flex flex-wrap -mx-1 overflow-hidden" }, [
+      _c("div", {
+        staticClass:
+          "my-1 px-1 w-full overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3"
       }),
-      0
-    )
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "my-1 px-1 w-full overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3"
+        },
+        [
+          _c("section", { staticClass: "mt-5" }, [
+            _c("div", { staticClass: "border rounded-md p-4" }, [
+              _c("table", [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.items, function(item) {
+                    return _c("tr", { key: item.id }, [
+                      _c("td", { staticClass: "rounded p-4 border text-sm" }, [
+                        _vm._v(_vm._s(item.original_url))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "rounded p-4 border text-sm" }, [
+                        _vm._v(_vm._s(item.created_at))
+                      ])
+                    ])
+                  }),
+                  0
+                )
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", {
+        staticClass:
+          "my-1 px-1 w-full overflow-hidden md:w-1/3 lg:w-1/3 xl:w-1/3"
+      })
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Origianl Url")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Created Date")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

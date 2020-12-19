@@ -15,7 +15,9 @@ class ApiController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+//        dump(\Log::info(print_r($posts,true)));
+        return response()->json($posts);
     }
 
     /**
@@ -86,7 +88,7 @@ class ApiController extends Controller
 
     public function apiUrlStore(Request $request)
     {
-//        dump(\Log::info(print_r($request->all(),true)));
+//     dump(\Log::info(print_r($request->all(),true)));
         $post = new Post();
         $post->original_url = $request->original_url;
         $post->save();
