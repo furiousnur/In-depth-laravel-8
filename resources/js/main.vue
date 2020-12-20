@@ -1,5 +1,6 @@
 <template>
     <div>
+        <bridge-notify />
         <app-header />
         <div class="min-h-screen">
             <app-index />

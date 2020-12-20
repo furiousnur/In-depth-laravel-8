@@ -14,6 +14,7 @@ Route::resource('api-url', \App\Http\Controllers\ApiController::class);
 
 Route::post('api-url-store', [\App\Http\Controllers\ApiController::class, 'apiUrlStore']);
 Route::get('api-url-get-all', [\App\Http\Controllers\ApiController::class, 'index']);
+Route::delete('api-url-delete/{id}', [\App\Http\Controllers\ApiController::class, 'destroy']);
 
 Route::get('db-insert', function (){
 /*   DB::table('users')->create([

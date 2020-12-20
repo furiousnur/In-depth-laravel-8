@@ -83,7 +83,9 @@ class ApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+//        dump(\Log::info(print_r($id,true)));
+        $delete = Post::find($id)->delete();
+        return response()->json($delete);
     }
 
     public function apiUrlStore(Request $request)
