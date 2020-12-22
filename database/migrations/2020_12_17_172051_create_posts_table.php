@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('original_url');
+            $table->string('shorten_url');
             $table->timestamps();
         });
     }
