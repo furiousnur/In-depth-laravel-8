@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +16,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /*View::composer('*',function ($view){
+            $categories = Cache::rememberForever('categories',function (){
+              return Category::all();
+           });
+        });*/
     }
 
     /**
