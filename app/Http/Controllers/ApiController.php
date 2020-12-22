@@ -93,7 +93,7 @@ class ApiController extends Controller
     {
 //     dump(\Log::info(print_r($request->all(),true)));
         $post = new Post();
-        $post->shorten_url = Str::random();
+//        $post->shorten_url = Str::random();
         $post->original_url = $request->original_url;
         $post->save();
         return response()->json($post);

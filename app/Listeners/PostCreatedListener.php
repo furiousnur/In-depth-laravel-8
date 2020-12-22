@@ -27,6 +27,7 @@ class PostCreatedListener
      */
     public function handle(PostCreated $event)
     {
-        dd("done", $event->post);
+//        $event->shorten_url = Str::random();
+//        dd("done", $event->post);
     }
 }
