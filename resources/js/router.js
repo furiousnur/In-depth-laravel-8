@@ -1,21 +1,24 @@
-import AllPosts from './components/AllPost.vue';
-import AddPost from './components/AddPost.vue';
-import EditPost from './components/EditPost.vue';
+import Vue from "vue";
 
-export const routes = [
-    {
-        name: 'home',
-        path: '/',
-        component: AllPosts
-    },
-    {
-        name: 'add',
-        path: '/add',
-        component: AddPost
-    },
-    {
-        name: 'edit',
-        path: '/edit/:id',
-        component: EditPost
-    }
-];
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+// 1. Define route components.
+// These can be imported from other files
+import Index from "./pages/index";
+import Login from "./pages/login";
+import Register from "./pages/register";
+
+const routes = [
+    { path: '/', component: Index },
+    { path: '/signin', component: Login },
+    { path: '/signup', component: Register },
+]
+
+const router = new VueRouter({
+    routes,
+    /*hashbang:false,
+    mode:"history"*/
+})
+
+export default router;

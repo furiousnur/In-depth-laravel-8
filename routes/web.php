@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\Route;
    return view('vue-welcome');
 });*/
 
-Route::view('/vue','vue-welcome');
-//Route::view('/', 'welcome');
-Route::get('/',function (){
+//Route::view('/vue','vue-welcome');
+Route::view('/', 'vue-welcome');
+/*Route::get('/',function (){
 //   $categories = \App\Models\Category::all();
     $categories = Cache::rememberForever('categories',function (){
         return Category::all();
     });
    return view('welcome',compact('categories'));
-});
+});*/
 Route::resource('api-url', \App\Http\Controllers\ApiController::class);
 Route::post('api-url-store', [\App\Http\Controllers\ApiController::class, 'apiUrlStore']);
 Route::get('api-url-get-all', [\App\Http\Controllers\ApiController::class, 'index']);

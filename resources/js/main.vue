@@ -3,7 +3,8 @@
         <bridge-notify />
         <app-header />
         <div class="min-h-screen">
-            <app-index />
+            <router-view></router-view>
+<!--            <app-index />-->
         </div>
         <app-footer />
     </div>
@@ -15,8 +16,8 @@
 <script>
     import AppHeader from "./components/layout/Header";
     import AppFooter from "./components/layout/Footer";
-    import AppIndex from "./pages/index";
+    // import AppIndex from "./pages/index";
     export default {
-        components: {AppHeader, AppFooter, AppIndex},
+        components: {AppHeader, AppFooter/*, AppIndex*/},
     };
 </script>
