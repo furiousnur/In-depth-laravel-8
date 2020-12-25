@@ -1,7 +1,7 @@
 <template>
     <nav class="bg-teal-600 p-4 flex justify-between sticky">
-        <h1 class="text-white text-xl">
-            <router-link to="/" class="text-xl text-white px-3">
+        <h1 class="text-white text-xl hover:text-red-500">
+            <router-link to="/" class="text-xl text-white px-3 ">
                 Home
             </router-link>
         </h1>
